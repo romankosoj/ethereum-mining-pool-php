@@ -30,7 +30,7 @@ Now move files <pre>nonce_fast.py and nonce.py</pre> from 'misc' directory to <p
 To maximize performance tweak configurations of memcached,mariadb,nginx,hhvm and kernel but it's not necessary to start pool.<br>
 
 #Start Pool
-<pre>screen<br>Push Enter key<br>geth --rpcaddr 127.0.0.1 --rpcport 8983 --rpc --unlock COINBASE_ADDRESS</pre>
+<pre>screen -dmS geth geth --rpcaddr 127.0.0.1 --rpcport 8983 --rpc --unlock COINBASE_ADDRESS</pre>
 
 Now start background scripts:<br>
 Get Work from GETH Json RPC and cache it with memcached (reduces queries to geth rpc)
@@ -69,7 +69,7 @@ Setting up pool revenue address and fee<br>
 <br><br>
 You can easily access all background scripts by
 <pre>
-screen -x stats/update_calculator/block_processing/process_work</pre>
+screen -x stats/update_calculator/block_processing/process_work/geth</pre>
 
 #Contributing
 If you want to contribute, fork and pull request or open issue.
