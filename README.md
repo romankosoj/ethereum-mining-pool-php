@@ -34,13 +34,13 @@ To maximize performance tweak configurations of memcached,mariadb,nginx,hhvm and
 
 Now start background scripts:<br>
 Get Work from GETH Json RPC and cache it with memcached (reduces queries to geth rpc)
-<pre>screen<br>Push Enter key<br>sudo php /var/www4/block_processing/process_work/index.php</pre>
+<pre>screen -dmS process_work php /var/www4/block_processing/process_work/index.php</pre>
 <br>Block Processing - this script handle block splitting and Proof of Work verification
-<pre>screen<br>Push Enter key<br>sudo php /var/www4/block_processing/index.php</pre>
+<pre>screen -dmS block_processing php /var/www4/block_processing/index.php</pre>
 <br>This script updates data to calculate predicted mining rewards
-<pre>screen<br>Push Enter key<br>sudo php /var/www4/block_processing/update_calculator/index.php</pre>
+<pre>screen -dmS update_calculator php /var/www4/block_processing/update_calculator/index.php</pre>
 <br>Used to process internal statistics and save to database
-<pre>screen<br>Push Enter key<br>sudo php /var/www4/block_processing/stats/index.php</pre>
+<pre>screen -dmS stats php /var/www4/block_processing/stats/index.php</pre>
 
 <br>
 You can execute withdraws manually or add it as cron job
@@ -69,7 +69,7 @@ Setting up pool revenue address and fee<br>
 <br><br>
 You can easily access all background scripts by
 <pre>
-screen -ls<br>then pick one by<br>screen -x INTEGER</pre>
+screen -x stats/update_calculator/block_processing/process_work</pre>
 
 #Contributing
 If you want to contribute, fork and pull request or open issue.
