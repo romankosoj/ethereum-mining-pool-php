@@ -5,7 +5,7 @@ include('/var/www4/BigInteger.php');
 $m->addServer('localhost', 11211);
 
 while (1) {
-$ch1 = curl_init('http://www.worldcoinindex.com/apiservice/json?key=VmSgGMRH16yrWfmpMccmP4Xdv');                                                                                                                                                                                                          
+$ch1 = curl_init('https://www.worldcoinindex.com/apiservice/json?key=VmSgGMRH16yrWfmpMccmP4Xdv');                                                                                                                                                                                                          
 curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);                                                                      
 curl_setopt($ch1, CURLOPT_HTTPHEADER, array(                                                                          
     'Content-Type: application/json',                                                                                
