@@ -79,9 +79,3 @@ If you want to contribute, fork and pull request or open issue.
 Entire PHP and Python code is under The MIT License (MIT)<br>
 Front-end(site theme) is used from http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/<br>
 Personally i own license, so better buy license or use your own front-end.
-
-#Donate
-Bitcoin -> 1MsCcLLzaZtgEiMsigFoRJjz149mPSoFKC<br>
-![alt tag](http://s16.postimg.org/xbne92mdx/image.png)<br>
-
-Ethereum -> 0x9284e52d64d888f2aa1bb62a38f3b5259487376a
