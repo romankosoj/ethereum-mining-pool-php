@@ -4,7 +4,7 @@ This is full source of Ethereum Mining Pool - http://ethereumpool.co Pool has be
 <b>Disclaimer</b><br>
 This is latest avaiable source code from original <b>ethereumpool.co</b> mining pool.<br>Domain has been sold to <b>eth.pp.ua</b>
 
-#Requirements
+# Requirements
 Recommended <a href="https://github.com/facebook/hhvmHHVM" target="_blank">HHVM</a> over php5-fpm, but php5-fpm is fine.<br>
 <a href="https://mariadb.org" target="_blank">MariaDB server</a><br>
 <a href="http://memcached.org" target="_blank">Memcached</a><br>
@@ -16,7 +16,7 @@ Recommended <a href="https://github.com/facebook/hhvmHHVM" target="_blank">HHVM<
  
 
 
-#Setup on Linux
+# Setup on Linux
 Install all software mentioned above.<br>
 Setup your mysql server and import database scheme <pre>misc>database_scheme.sql</pre>
 Now please review all source files and set desired names etc. and setup valid mysql connection details in config.php.
@@ -29,7 +29,7 @@ Also remember to setup phpmyadmin with ssl, etc..<br>
 Now move files <pre>nonce_fast.py and nonce.py</pre> from 'misc' directory to <pre>/root/pyethereum/ethereum/ (main directory of Pyethereum)</pre><br>
 To maximize performance tweak configurations of memcached,mariadb,nginx,hhvm and kernel but it's not necessary to start pool.<br>
 
-#Start Pool
+# Start Pool
 <pre>screen -dmS geth geth --rpcaddr 127.0.0.1 --rpcport 8983 --rpc --unlock COINBASE_ADDRESS</pre>
 
 Now start background scripts:<br>
@@ -54,7 +54,7 @@ This both scripts can be used to check if withdraws has been processed correctly
 sudo php /home/www4/block_processing/withdraw_check/index.php
 curl http://127.0.0.1:9846/check/</pre>
 
-#Notes
+# Notes
 withdraw_check and withdraw scripts saves logs in block_processing directory.<br>
 If you would like to debug mining proxy (mainpage/index.php)
 <pre>$logstate = true;</pre>
@@ -71,11 +71,11 @@ You can easily access all background scripts by
 <pre>
 screen -x stats/update_calculator/block_processing/process_work/geth</pre>
 
-#Contributing
+# Contributing
 If you want to contribute, fork and pull request or open issue.
 
 
-#License
+# License
 Entire PHP and Python code is under The MIT License (MIT)<br>
 Front-end(site theme) is used from http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/<br>
 Personally i own license, so better buy license or use your own front-end.
